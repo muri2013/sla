@@ -1,0 +1,27 @@
+import pygame
+import sys
+
+# Inicializar o Pygame
+pygame.init()
+
+# Definir as dimensões da tela
+screen_width = 800
+screen_height = 600
+screen = pygame.display.set_mode((screen_width, screen_height))
+pygame.display.set_caption('Jogo 2D - Movimentação')
+
+# Definir as cores
+white = (255, 255, 255)
+black = (0, 0, 0)
+
+# Definir as propriedades do personagem
+player_size = 50
+player_color = black
+player_x = screen_width // 2
+player_y = screen_height // 2
+player_speed = 5
+
+# Loop principal do jogo
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
